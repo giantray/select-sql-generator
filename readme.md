@@ -55,7 +55,7 @@ System.out.println(sql.getSelectAll());
 	@SqlOper(Oper.EQUAL)
 	private String sexuality;
 ```
-above example means that if the field value(sexuality) is not null(in other words,if the field value is null,it will not be add to the sql),the sql will be "select * from xxx where sexuality = 'abc'(abc is the field value you set)
+	above example means that if the field value(sexuality) is not null(in other words,if the field value is null,it will not be add to the sql),the sql will be "select * from xxx where sexuality = 'abc'(abc is the field value you set)
 
 - @SqlLimit
 
@@ -97,6 +97,7 @@ above example means that if the field value(sexuality) is not null(in other word
 `SqlGenerator.getSelectWhere(query)` help you gen the sql eaily,say hello to annotation and say goodbye to ugly assemble code which is not in common use
 
 finally,get the sql with two way:
+
 1. `sql.getSelectAll()` get the sql with para.
 2. `sql.getSelectAllForPreparedstatement()`,`SqlGenerator.setPreparedstatementPara`help you get sql by preparedStatement.
 
