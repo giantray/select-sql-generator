@@ -55,7 +55,7 @@ System.out.println(sql.getSelectAll());
 	@SqlOper(Oper.EQUAL)
 	private String sexuality;
 ```
-	above example means that if the field value(sexuality) is not null(in other words,if the field value is null,it will not be add to the sql),the sql will be "select * from xxx where sexuality = 'abc'(abc is the field value you set)
+above example means that if the field value(sexuality) is not null(in other words,if the field value is null,it will not be add to the sql),the sql will be "select * from xxx where sexuality = 'abc'(abc is the field value you set)
 
 - @SqlLimit
 
