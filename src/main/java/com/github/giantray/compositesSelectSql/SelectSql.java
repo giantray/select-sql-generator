@@ -1,5 +1,8 @@
 package com.github.giantray.compositesSelectSql;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Select SQL generate result set
  */
@@ -24,6 +27,22 @@ public class SelectSql {
 	 * order segment like 'order by xx desc'
 	 */
 	private String order;
+
+	/**
+	 * sql like 'select * from xxx where a =? and b =? order by xxx limit x,x'
+	 */
+	private String selectAllForPreparedstatement;
+
+	/**
+	 * sql like 'select count(*) from xxx where a =? and b =? order by xxx limit
+	 * x,x'
+	 */
+	private String selectCountForPreparedstatement;
+
+	/**
+	 * para for preparedstatement sql where condition
+	 */
+	private List<Object> whereParaListForPreparedstatement = new ArrayList<Object>();
 
 	/**
 	 * 
@@ -84,6 +103,44 @@ public class SelectSql {
 
 	public void setOrder(String order) {
 		this.order = order;
+	}
+
+	/**
+	 * 
+	 * @return sql like 'select count(*) from xxx where a =? and b =? order by
+	 *         xxx limit
+	 */
+	public String getSelectAllForPreparedstatement() {
+		return selectAllForPreparedstatement;
+	}
+
+	public void setSelectAllForPreparedstatement(String selectAllForPreparedstatement) {
+		this.selectAllForPreparedstatement = selectAllForPreparedstatement;
+	}
+
+	/**
+	 * 
+	 * @return sql like 'select count(*) from xxx where a =? and b =? order by
+	 *         xxx limit x,x'
+	 */
+	public String getSelectCountForPreparedstatement() {
+		return selectCountForPreparedstatement;
+	}
+
+	public void setSelectCountForPreparedstatement(String selectCountForPreparedstatement) {
+		this.selectCountForPreparedstatement = selectCountForPreparedstatement;
+	}
+
+	/**
+	 * 
+	 * @return para for preparedstatement sql where condition
+	 */
+	public List<Object> getWhereParaListForPreparedstatement() {
+		return whereParaListForPreparedstatement;
+	}
+
+	public void setWhereParaListForPreparedstatement(List<Object> whereParaListForPreparedstatement) {
+		this.whereParaListForPreparedstatement = whereParaListForPreparedstatement;
 	}
 
 }

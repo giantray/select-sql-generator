@@ -19,7 +19,7 @@ public class ExampleQuery {
 	@SqlOper(Oper.EQUAL)
 	private String sexuality;
 	@SqlOper(Oper.GREATER)
-	private int score;
+	private Integer score;
 	@SqlOper(Oper.LESSEQUAL)
 	private Date createAt;
 
