@@ -105,12 +105,12 @@ Add this to your project's pom.xml
 ```xml
 	<dependency>
 		  <groupId>com.github.giantray</groupId>
-		  <artifactId>selectSqlGenerator</artifactId>
+		  <artifactId>select-sql-generator</artifactId>
 		  <version>1.0</version>
 	</dependency>
 ```
 
-(note:Sonatype's `snapshots` repository is not ready yet)
+You get get this jar by [Sonatype's snapshots](https://oss.sonatype.org) repository 
 
 
 ##License
