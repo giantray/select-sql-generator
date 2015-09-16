@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.github.giantray</groupId>
-  <artifactId>compositesSelectSql</artifactId>
+  <artifactId>selectSqlGenerator</artifactId>
   <version>1.0</version>
   <packaging>jar</packaging>
 
@@ -22,6 +22,9 @@
 			<version>4.12</version>
 			<scope>test</scope>
 		</dependency>
+		
+			
+
 
   </dependencies>
 </project>

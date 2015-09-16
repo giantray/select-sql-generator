@@ -154,6 +154,7 @@ public class SqlGenerator {
 	 * @throws IllegalAccessException
 	 */
 	private static void setWhere(Object o, SqlStr sqlStr, Field field) throws IllegalAccessException {
+
 		String where = sqlStr.getWhere();
 
 		SqlOper oper = (SqlOper) field.getAnnotation(SqlOper.class);
@@ -170,6 +171,11 @@ public class SqlGenerator {
 
 		if (StringUtil.isNotBlank(where)) {
 			where += " and ";
+		}
+
+		if (fieldValue instanceof String) {
+
+			fieldValue = String.valueOf(fieldValue).replaceAll("([';])+|(--)+", "");
 		}
 
 		// format the value

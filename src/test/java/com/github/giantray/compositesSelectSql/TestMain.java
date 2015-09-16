@@ -20,7 +20,7 @@ public class TestMain {
 		query.setOrder(Order.DESC);
 		query.setOrderCol("name");
 		query.setScore(60);
-		query.setSexuality("");
+		query.setSexuality("male ' or 1=1");
 		// query.setSize(0);
 		// query.setStart(5);
 
