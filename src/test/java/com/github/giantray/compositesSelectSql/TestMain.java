@@ -34,6 +34,8 @@ public class TestMain {
 		System.out.println(sql.getSelectCountForPreparedstatement());
 	}
 
+	// you can debug the example yourself
+	// @Test
 	public void testSQLInjection2() {
 
 		Connection connection = null;
@@ -45,10 +47,10 @@ public class TestMain {
 			ExampleQuery query = new ExampleQuery();
 
 			query.setCreateAt(new Date(System.currentTimeMillis()));
-			query.setSexuality("test");
+			query.setSexuality("male ' or 1=1");
 
 			SelectSql sql = SqlGenerator.getSelectWhere(query);
-			System.out.println(sql.getSelectAllForPreparedstatement());
+
 			connection = JDBCTools.getConnection();
 			preparedStatement = connection.prepareStatement(sql.getSelectAllForPreparedstatement());
 
@@ -60,7 +62,8 @@ public class TestMain {
 			while (resultSet.next()) {
 				i++;
 			}
-			System.out.println(i);
+			System.out.println("result set size =" + i);
+			System.out.println(sql.getSelectAllForPreparedstatement());
 
 		} catch (Exception e) {
 			e.printStackTrace();
