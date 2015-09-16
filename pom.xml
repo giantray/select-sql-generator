@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.github.giantray</groupId>
-  <artifactId>selectSqlGenerator</artifactId>
+  <artifactId>select-sql-generator</artifactId>
   <version>1.0</version>
   <packaging>jar</packaging>
 
